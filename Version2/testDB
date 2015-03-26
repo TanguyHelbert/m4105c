@@ -1,0 +1,45 @@
+equipement
+insertDB
+equipement
+insertDB
+equipement
+("Carrière d'été", '490260005')
+('Le Massif Granitique', '490260010')
+('Gymnase de Bois Robert', '490260011')
+('TERRAIN Multisports', '490260011')
+('TERRAIN EXTERIEUR DE VOLLEY- BALL', '490260011')
+('Terrain de  Basket et Hanball', '490260011')
+('SALLE DE GYMNASTIQUE', '490260011')
+('SKATE PARK', '490260006')
+('Salle le Bordage', '490270001')
+('Salle Omnisports', '490270001')
+installation
+insertDB
+installation
+insertDB
+installation
+('Abbaretz', '440010002')
+('Abbaretz', '440010003')
+('Abbaretz', '440010004')
+('Abbaretz', '440010005')
+('Abbaretz', '440010006')
+('Abbaretz', '440010007')
+('Aigrefeuille-sur-Maine', '440020001')
+('Aigrefeuille-sur-Maine', '440020002')
+('Aigrefeuille-sur-Maine', '440020003')
+('Aigrefeuille-sur-Maine', '440020004')
+activites
+insertDB
+activites
+insertDB
+activites
+(' 213704', 'Chapelle-Basse-Mer')
+(' 213704', 'Chapelle-Basse-Mer')
+(' 213704', 'Chapelle-Basse-Mer')
+(' 290456', 'Chapelle-Basse-Mer')
+(' 290457', 'Chapelle-Basse-Mer')
+(' 290458', 'Chapelle-Basse-Mer')
+(' 290460', 'Chapelle-Basse-Mer')
+(' 291894', 'Chapelle-Basse-Mer')
+(' 291987', 'Chapelle-Basse-Mer')
+(' 291987', 'Chapelle-Basse-Mer')

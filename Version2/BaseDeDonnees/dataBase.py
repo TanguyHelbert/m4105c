@@ -50,15 +50,15 @@ class DataBase:
 
 	def select(self, id):
 		conn = self.open()
-		if self.name=="equipement":
-			attribut="InsNum"
-		elif self.name=="activites":
-			attribut="ComLib"
+		if self.name=="equipment":
+			colonne="InsNum"
+		elif self.name=="activity":
+			colonne="EquipmentId"
 		else:
-			attribut="numero"
+			colonne="numb"
 
 		c = conn.cursor()
-		c.execute("SELECT * FROM " + self.name + " where " + attribut + "like '%" + id + "%'")
+		c.execute("SELECT * FROM " + self.name + " WHERE " + colonne + " LIKE '%" + id + "%'")
 		occurence = c.fetchall()
 		return occurence
 		self.close(conn)

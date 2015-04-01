@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import fiches.Installation as ins
-import fiches.Equipment as eq
-import fiches.Activity as ac
-import BaseDeDonnees.dataBase as db
-items = ins.parse_json_installation("data/fichesInstall.json")
-items2 = eq.parse_json_equipment("data/data_equipement.json")
-items2csv = eq.parse_csv_equipment("data/equipements.csv")
-items3 = ac.parse_json_activity("data/data_activites.json")
+import services.fiches.Installation as ins
+import services.fiches.Equipment as eq
+import services.fiches.Activity as ac
+import model.dataBase as db
+items = ins.parse_json_installation("services/data/fichesInstall.json")
+items2 = eq.parse_json_equipment("services/data/data_equipement.json")
+#items2csv = eq.parse_csv_equipment("services/data/equipements.csv")
+items3 = ac.parse_json_activity("services/data/data_activites.json")
 
 database = db.DataBase("dataBase.db", "Equipment", items2)
 print("Equipment")

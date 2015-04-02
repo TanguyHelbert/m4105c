@@ -1,23 +1,29 @@
 import sqlite3
 
 class DataBase:
+	"""docstring for DataBase"""
 	def __init__(self, path, name, items):
 		self.path=path
 		self.name=name
 		self.items=items
 
+	"""set the name of the data base"""
 	def setName(self, name):
 		self.name=name
 
+	"""get the name of the data base"""
 	def getName(self):
 		return self.name
 
+	"""set the list of items"""
 	def setItems(self, items):
 		self.items=items
 
+	"""open the connection"""
 	def open(self):
 		return sqlite3.connect(self.path)
 
+	"""create the table"""
 	def table(self):
 		conn = self.open()
 		c = conn.cursor()
@@ -27,6 +33,7 @@ class DataBase:
 		conn.commit()
 		self.close(conn)
 
+	"""do a loop to insert all items in the list in the table"""
 	def insert(self):
 		conn = self.open()
 		c = conn.cursor()
@@ -38,6 +45,7 @@ class DataBase:
 		conn.commit()
 		self.close(conn)
 
+	"""return all items in the list"""
 	def selectAll(self):
 		conn = self.open()
 		c = conn.cursor()
@@ -48,16 +56,16 @@ class DataBase:
 		return liste
 		self.close(conn)
 
+	"""return all items corresponding to the id"""
 	def select(self, id):
 		conn = self.open()
-		colonne="numb"
-
 		c = conn.cursor()
-		c.execute("SELECT * FROM " + self.name + " WHERE " + colonne + " LIKE '%" + id + "%'")
+		c.execute("SELECT * FROM " + self.name + " WHERE numb LIKE '%" + id + "%'")
 		occurence = c.fetchall()
 		return occurence
 		self.close(conn)
 
+	"""return all items corresponding to the parameters"""
 	def selectSpecial(self, activity, cityy):
 		conn = self.open()
 		c = conn.cursor()
@@ -66,14 +74,16 @@ class DataBase:
 		liste = c.fetchall()
 		return liste
 		self.close(conn)
-		
+	
+	"""return the number of attributs in the table"""
 	def countAttribut(self):
 		conn = self.open()
 		c = conn.cursor()
 		c.execute("SELECT COUNT(*) FROM " + self.name)
-		nbItems = c.fetchone()[0]
-		return nbItems
+		nb_Items = c.fetchone()[0]
+		return nb_Items
 		self.close(conn)
 
+	"""close the connection"""
 	def close(self, conn):
 		conn.close()
